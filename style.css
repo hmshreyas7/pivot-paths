@@ -1,0 +1,335 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+    height: 90vh;
+    width: 98%;
+}
+
+svg {
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100vw;
+    z-index: -1;
+}
+
+.authors-item {
+    background: rgb(255, 255, 255, 0.5) url("assets/author.png") no-repeat left center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #004787;
+    display: table;
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.authors-item:hover {
+    background: #fff url("assets/author.png") no-repeat left center;
+    border: 2px solid #3488BC;
+    cursor: pointer;
+}
+
+.authors-item-detail {
+    background: #fff url("assets/author_dark.png") no-repeat left center;
+    border: 2px solid #3488BC;
+    border-radius: 0.5em;
+    color: #004787;
+    cursor: pointer;
+    display: table;
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.authors-item-anchor {
+    background: url("assets/author_anchor.png") no-repeat left center, #3488BC url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #004787;
+}
+
+.authors-item-anchor-detail {
+    background: url("assets/author_light.png") no-repeat left center, #3488BC url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #004787;
+}
+
+.authors-item-anchor.delete-cross {
+    background: url("assets/author_anchor.png") no-repeat left center, #3488BC url("assets/delete_light.png") no-repeat right center;
+}
+
+.articles-item {
+    background: rgb(255, 255, 255, 0.5) url("assets/article.png") no-repeat left center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #238647;
+    /* display: table; */
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.articles-item:hover {
+    background: #fff url("assets/article.png") no-repeat left center;
+    border: 2px solid #62A55E;
+    cursor: pointer;
+}
+
+.articles-item-detail {
+    background: #fff url("assets/article_dark.png") no-repeat left center;
+    border: 2px solid #62A55E;
+    border-radius: 0.5em;
+    color: #238647;
+    cursor: pointer;
+    display: table;
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.articles-item-anchor {
+    background: url("assets/article_anchor.png") no-repeat left center, #62A55E url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #157436;
+}
+
+.articles-item-anchor-detail {
+    background: url("assets/article_light.png") no-repeat left center, #62A55E url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #157436;
+}
+
+.articles-item-anchor.delete-cross {
+    background: url("assets/article_anchor.png") no-repeat left center, #62A55E url("assets/delete_light.png") no-repeat right center;
+}
+
+.backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.backdrop-view {
+    background-color: rgba(0,0,0,.25);
+    display: inline-block;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.detail-hide {
+    display: none;
+    opacity: 0;
+}
+
+.detail-show {
+    background-color: #fff;
+    display: inline-block;
+    font-size: 87.5%;
+    opacity: 1;
+    padding: 5px 10px;
+    position: absolute;
+    width: 18%;
+}
+
+.detail-show h1 {
+    font-size: 112.5%;
+}
+
+.detail-show h2 {
+    color: #62A55E;
+    font-size: 100%;
+}
+
+.detail-show p {
+    font-size: 87.5%;
+}
+
+.help {
+    background: #fff url("assets/help.png") no-repeat 3px center;
+    border: 1px solid #ddd;
+    border-radius: 0.5em;
+    color: #999;
+    cursor: pointer;
+    display: inline;
+    font-size: 80%;
+    letter-spacing: 0.15em;
+    padding: 2px 4px;
+    padding-left: 20px;
+}
+
+.help:hover {
+    background: #dedede url("assets/help_dark.png") no-repeat 3px center;
+	border: 1px solid #dedede;	
+	color: #555;
+}
+
+.item-counter {
+    border: 1px none;
+    color: #999;
+    display: none;
+    font-size: 75%;
+    opacity: 0;
+    padding: 1px 4px 2px 6px;
+    position: absolute;
+}
+
+.keywords-item {
+    background: rgb(255, 255, 255, 0.5) url("assets/keyword.png") no-repeat left center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #B2203B;
+    display: table;
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.keywords-item:hover {
+    background: #fff url("assets/keyword.png") no-repeat left center;
+    border: 2px solid #CD5968;
+    cursor: pointer;
+}
+
+.keywords-item-detail {
+    background: #fff url("assets/keyword_dark.png") no-repeat left center;
+    border: 2px solid #CD5968;
+    border-radius: 0.5em;
+    color: #B2203B;
+    cursor: pointer;
+    display: table;
+    font-size: 87.5%;
+    padding: 0px 5px 1px 20px;
+    position: absolute;
+}
+
+.keywords-item-anchor {
+    background: url("assets/keyword_anchor.png") no-repeat left center, #CD5968 url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #B02131;
+}
+
+.keywords-item-anchor-detail {
+    background: url("assets/keyword_light.png") no-repeat left center, #CD5968 url("assets/delete.png") no-repeat right center;
+    border: 2px solid transparent;
+    border-radius: 0.5em;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    padding: 0px 16px 1px 20px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #B02131;
+}
+
+.keywords-item-anchor.delete-cross {
+    background: url("assets/keyword_anchor.png") no-repeat left center, #CD5968 url("assets/delete_light.png") no-repeat right center;
+}
+
+.meta {
+    border: 1px none;
+    color: #999;
+    display: none;
+    font-size: 75%;
+    opacity: 0;
+    padding: 1px 4px 2px 6px;
+    position: absolute;
+}
+
+.overlay {
+    background: transparent;
+    display: none;
+    opacity: 0;
+}
+
+.overlay-view {
+    background-color: #fff;
+    border: 4px solid #dedede;
+    display: inline-block;
+    margin: 0;
+    margin-top: 78.5px;
+    padding: 0;
+}
+
+.results-empty {
+    opacity: 0;
+}
+
+.results {
+    margin: 10px 0% 10px 40%;
+}
+
+.search-box {
+    background: #FFF2E8 url("assets/search.png") no-repeat left center; 
+    border: 2px solid #FF7621;
+    border-radius: 0.5em;
+    display: block;
+    font-size: 93.75%;
+    margin: 150px 40% 0px;
+    padding: 2px;
+    padding-left: 16px;
+    width: 20%;
+}
+
+.search-box:focus {
+    outline: none;
+}
+
+.sort {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fff url('assets/dropdown.png') no-repeat right center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #999;
+    cursor: pointer;
+    font-size: 75%;
+    padding: 1px 12px 2px 0px;
+}
+
+.sort:hover {
+    background: #dedede url('assets/dropdown_dark.png') no-repeat right center;
+	border: 1px solid #dedede;	
+	color: #555;
+}
+
+#sort-widget {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
