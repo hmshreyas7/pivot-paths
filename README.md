@@ -1,6 +1,6 @@
 # PivotPaths
 
-This project is an implementation of [PivotPaths: Strolling through Faceted Information Spaces](https://mariandoerk.de/pivotpaths/infovis2012.pdf) using D3 v5 and articles from NY Times. The single facet anchor layout and a modified version of the resource layout mentioned in the paper are used here.
+This project is an implementation of [PivotPaths: Strolling through Faceted Information Spaces](https://mariandoerk.de/pivotpaths/infovis2012.pdf) using [D3](http://d3js.org) v5 and articles from [NY Times](https://developer.nytimes.com/docs/timeswire-product/1/overview). The single facet anchor layout and a modified version of the resource layout mentioned in the paper are used here.
 
 ## Folders and Files
 
